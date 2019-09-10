@@ -1,5 +1,7 @@
 package com.example.student.dangnhaphethong;
 
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,8 +14,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
 
-    CheckBox cb;
-    Button btn;
+    CheckBox cb,all;
+    Button btn,btn2;
 
 
     @Override
@@ -76,6 +78,23 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+        AlertDialog.Builder b= new AlertDialog.Builder(MainActivity.this);
+        b.setTitle("Thông báo");
+        b.setMessage("Bạn có chắc chắn muốn thoát?");
+        b.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        });
+        b.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        });
+
 
 
     }

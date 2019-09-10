@@ -69,4 +69,13 @@
         tools:layout_editor_absoluteX="113dp"
         tools:layout_editor_absoluteY="214dp" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="217dp"
+        android:layout_height="51dp"
+        android:text="Thoát"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="214dp" />
+
+
 </android.support.constraint.ConstraintLayout>
